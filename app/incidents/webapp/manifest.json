@@ -17,11 +17,25 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/odata/v4/processor/",
+        "uri": "odata/v4/processor/",
         "type": "OData",
         "settings": {
           "annotations": [],
           "odataVersion": "4.01"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "incidents-display": {
+          "semanticObject": "incidents",
+          "action": "display",
+          "title": "{{incidents-display.flpTitle}}",
+          "subTitle": "{{incidents-display.flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
         }
       }
     }
@@ -153,5 +167,9 @@
     "app": {
       "enableLazyLoading": true
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "incident-management"
   }
 }
